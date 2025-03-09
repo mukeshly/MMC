@@ -11497,3 +11497,61 @@ ul.blocks-gallery-grid li:before {
     height: 100%;
     border-radius: 50%;
 }
+
+/*table style*/
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0; /* Remove extra white space */
+  
+}
+
+/* Table Wrapper */
+.table-container {
+  width: 50%; /* Make table take half of the screen width */
+  margin: 0 auto; /* Center horizontally */
+}
+
+/* Table Styling */
+table {
+  width: 100%; /* Ensure table fills the wrapper */
+  border-collapse: collapse;
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
+
+/* Table Headers */
+th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  text-align: left;
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+/* Table Cells */
+td {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+/* Alternate Row Color */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Hover Effect */
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+
+.form-container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically if needed */
+  width: 100%; /* Ensures it takes full width */
+  margin: 20px auto; /* Adds spacing */
+  text-align: center;
+}
