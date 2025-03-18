@@ -24,6 +24,26 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Responsive Css -->
     <link rel="stylesheet" href="css/responsive.css">
+
+    <script>
+        window.TallyConfig = {
+          "formId": "mJMj5z",
+          "popup": {
+            "emoji": {
+              "text": "👋",
+              "animation": "wave"
+            },
+            "open": {
+              "trigger": "time",
+              "ms": 5000
+            },
+            "layout": "modal",
+            "autoClose": 0,
+            "doNotShowAfterSubmit": true
+          }
+        };
+        </script>
+
 </head>
 
 
@@ -332,25 +352,12 @@
             <button class="next" onclick="nextSlide()">&#10095;</button>
             <div class="pagination"></div>
         </div>
-
-        <section>
-            <div class="container custom-container-01">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="section-title-wrapper text-center">
-                            <h4 class="section-title">Enquiry Form</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="form-container">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfM_mUuQ9UiW0sszPpts_9gC-mRA1tF6Ppqb_Jz-73ONWsBbQ/viewform?embedded=true" 
-                    width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">
-                    Loading…
-                </iframe>
-            </div>
-        </section>
+       
+       <!--Tally form-->
+       <iframe data-tally-src="https://tally.so/embed/mJMj5z?transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="409" frameborder="0" marginheight="0" marginwidth="0" title="Contact us
+       "></iframe>
+       <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+        
 
          <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
             footer area start Here
