@@ -11662,3 +11662,79 @@ button:hover {
       height: 8px;
   }
 }
+
+
+/*banner slider*/
+
+/* Centering the section */
+.banner-slider-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Ensure the slider container adjusts to the image */
+.banner-slider-container {
+  width: 100%;
+  max-width: 400px; /* Adjust for desired width */
+  height: auto; /* Allow height to adjust based on image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Image Slider */
+.banner-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 300%; /* Adjusts for 3 images (increase if more) */
+}
+
+/* Ensure images fit inside without cropping */
+.banner-slider img {
+  width: 100%;
+  height: auto; /* Keeps aspect ratio */
+  max-height: 100vh; /* Prevents excessive height on large screens */
+  object-fit: contain; /* Ensures full image is visible */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Pagination Dots */
+.banner-pagination {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.banner-dot {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.banner-dot.active {
+  background: white;
+}
+
+/* Responsive Mobile View */
+@media (max-width: 768px) {
+  .banner-slider-container {
+      width: 90%;
+      aspect-ratio: 4 / 5; /* Maintains correct height on mobile */
+  }
+
+  .banner-dot {
+      width: 8px;
+      height: 8px;
+  }
+}

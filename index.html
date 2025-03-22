@@ -601,6 +601,154 @@ window.TallyConfig = {
             Director's Desk Section Area End Here
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
+         <!-- teem area start here  -->
+         <section class="our-team-area-wrapper section-top-space section-bottom-space">
+            <div class="our-team-inner">
+                <div class="container custom-container-01">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6">
+                            <div class="section-title-wrapper text-center">
+                                <h4 class="section-title">Our Team</h4>
+                                <p class="description">Guiding you to the best educational opportunities with expert support.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row column-gap-50">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="single-team-item style-02">
+                                <div class="thumbnail">
+                                    <img src="images/member1.jpeg" alt="team image">
+
+                                </div>
+
+                                <div class="content">
+                                    <h4 class="title">
+                                        <a href="#" tabindex="-1">Santosh Kumar</a>
+                                    </h4>
+                                    <p class="designation">Sr. Counsellor</p>
+                                    
+                                </div>
+
+                                <div class="hover-content">
+                                    <h4 class="title">
+                                        <a href="#" tabindex="-1">Santosh Kumar</a>
+                                    </h4>
+                                    <p class="designation">Sr. Counsellor</p>
+
+                                    <p class="paragraph">Knows the perfect college for you before you do! Santosh turns confusion into clarity with expert guidance.</p>
+
+                                  
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="single-team-item style-02">
+                                <div class="thumbnail">
+                                    <img src="images/member2.jpeg" alt="team image">
+
+                                </div>
+
+                                <div class="content">
+                                    <h4 class="title">
+                                        <a href="#" tabindex="-1">Rishab Kumar</a>
+                                    </h4>
+                                    <p class="designation">Sr. Counsellor</p>
+                                    
+                                </div>
+
+                                <div class="hover-content">
+                                    <h4 class="title">
+                                        <a href="#" tabindex="-1">Rishab Kumar</a>
+                                    </h4>
+                                    <p class="designation">Sr. Counsellor</p>
+
+                                    <p class="paragraph">Forms, deadlines, and choices? Rishab makes it all feel like a breeze, ensuring you land in the right college.</p>
+
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="single-team-item style-02">
+                                <div class="thumbnail">
+                                    <img src="images/member3.jpeg" alt="team image">
+
+                                </div>
+
+                                <div class="content">
+                                    <h4 class="title">
+                                        <a href="#" tabindex="-1">Er. Rekha</a>
+                                    </h4>
+                                    <p class="designation">Counsellor</p>
+                                    
+                                </div>
+
+                                <div class="hover-content">
+                                    <h4 class="title">
+                                        <a href="#" tabindex="-1">Er. Rekha</a>
+                                    </h4>
+                                    <p class="designation">Counsellor</p>
+
+                                    <p class="paragraph">Lost in the maze of options? Rekha's strategic counseling leads you straight to your dream career.</p>
+
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="single-team-item style-02">
+                                <div class="thumbnail">
+                                    <img src="images/member4.jpeg" alt="team image">
+
+                                </div>
+
+                                <div class="content">
+                                    <h4 class="title">
+                                        <a href="#" tabindex="-1">Priya Sonkar</a>
+                                    </h4>
+                                    <p class="designation">Counsellor</p>
+                                    
+                                </div>
+
+                                <div class="hover-content">
+                                    <h4 class="title">
+                                        <a href="#" tabindex="-1">Priya Sonkar</a>
+                                    </h4>
+                                    <p class="designation">Counsellor</p>
+
+                                    <p class="paragraph">Your wish for the perfect college is her command! Priya’s deep insights make admissions stress-free.</p>
+
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- team area end here  -->
+
+        <!-- Image Slider Section -->
+    <section class="banner-slider-section">
+        <div class="banner-slider-container">
+            <div class="banner-slider">
+                <img src="images/mmcbanner1.jpeg" alt="Slide 1">
+                <img src="images/mmcbiharcreditcard.jpeg" alt="Slide 2">
+               
+            </div>
+            <div class="banner-pagination">
+                <span class="banner-dot active"></span>
+                <span class="banner-dot"></span>
+                
+            </div>
+        </div>
+    </section>
+    
+
         
 
         
@@ -969,6 +1117,41 @@ window.TallyConfig = {
     <script src="js/slick.min.js"></script>
     <!-- main js -->
     <script src="js/main.js"></script>
+
+    <!--banner slider js-->
+    <script>
+       document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.querySelector(".banner-slider");
+    const dots = document.querySelectorAll(".banner-dot");
+    let index = 0;
+    const totalSlides = dots.length;
+
+    function moveSlider() {
+        index = (index + 1) % totalSlides; // Loop back after last image
+        slider.style.transform = `translateX(-${index * 100}%)`;
+        updateDots();
+    }
+
+    function updateDots() {
+        dots.forEach((dot, i) => {
+            dot.classList.toggle("active", i === index);
+        });
+    }
+
+    // Auto-slide every 5 seconds
+    setInterval(moveSlider, 5000);
+
+    // Manual click on dots to change slides
+    dots.forEach((dot, i) => {
+        dot.addEventListener("click", () => {
+            index = i;
+            slider.style.transform = `translateX(-${index * 100}%)`;
+            updateDots();
+        });
+    });
+});
+    </script>
+
 
    
 
